@@ -1,15 +1,15 @@
+/*1. Write a program “ PrintThreeNames.java ” that takes three names as input and
+prints out a proper sentence with the names in the reverse of the order given, so
+that for example, " java PrintThreeNames Alice Bob Carol " gives "Hi Carol, Bob,
+and Alice.".*/
+
 import java.util.*;
 public class PrintThreeNames {
 
 	public static void main(String[] args) {
-		Scanner sc=new Scanner(System.in);
-		String s=sc.nextLine();
-		String[] str=s.split(" ");
 		System.out.print("Hi ");
-		//System.out.print(str[str.length-1]);
-		for(int i=str.length-1;i>0;i--)
-			System.out.print(str[i]+", ");
-		System.out.print("and "+str[0]+".");
+		for(int i=args.length-1;i>0;i--)
+			System.out.print(args[i]+", ");
+		System.out.print("and "+args[0]+".");
 	}
-
 }
