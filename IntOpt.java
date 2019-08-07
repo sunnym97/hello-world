@@ -10,6 +10,9 @@
 
 package com.bridgelabz.functional;
 import java.util.*;
+
+import com.bridgelabz.Utility.Utility;
+
 public class IntOpt {
 	public static void main(String[] args) {
 		Scanner scanner=new Scanner(System.in);
@@ -18,30 +21,15 @@ public class IntOpt {
 		System.out.println("2. a*b+c");
 		System.out.println("3. c+a/b");
 		System.out.println("4. a%b+c");
-		int op=scanner.nextInt();
+		int option=scanner.nextInt();
+		System.out.println("Enter the value of a:");
 		int a=scanner.nextInt();
+		System.out.println("Enter the value of b:");
 		int b=scanner.nextInt();
+		System.out.println("Enter the value of c:");
 		int c=scanner.nextInt();
-		switch(op) 
-		{
-			case 1: 
-				int d=a+b*c;
-				System.out.println(d);
-					break;
-			case 2: 
-				int e=a*b+c;
-				System.out.println(e);	
-					break;
-			case 3: 
-				int f=c+a/b;
-				System.out.println(f);
-					break;
-			case 4:
-				int g=a%b+c;
-				System.out.println(g);
-					break;
-			default: System.out.println("pls enter correct operation");
-		}
+		Utility utility=new Utility();
+		utility.getIntegerOperations(option,a,b,c);
 		scanner.close();
 	}
 }
