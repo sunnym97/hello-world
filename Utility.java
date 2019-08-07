@@ -9,6 +9,8 @@
 
 package com.bridgelabz.Utility;
 
+import static java.lang.Math.sqrt;
+
 public class Utility {
 	public void getIntegerOperations(int option,int a,int b,int c)
 	{
@@ -66,5 +68,14 @@ public class Utility {
 			System.out.println("Leap Year");
 		else
 			System.out.println("Not a Leap Year");
+	}
+	
+	public void getSquareRoots(int a, int b, int c)
+	{
+		int delta = b*b-4*a*c;
+		double root1_x=(-b+sqrt(delta))/(2*a);
+		double root2_x=(-b-sqrt(delta))/(2*a);
+		System.out.println(root1_x);
+		System.out.println(root2_x);
 	}
 }
