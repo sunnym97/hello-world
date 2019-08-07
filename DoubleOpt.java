@@ -1,31 +1,34 @@
+/******************************************************************************
+ *  Purpose: To print the following Double operations a + b *c, a * b + c, c + a / b, and
+ *  		 a % b + c.
+ *
+ *  @author  Sunny
+ *  @version 1.0
+ *  @since   07-08-2019
+ *
+ ******************************************************************************/
+
+package com.bridgelabz.functional;
 import java.util.Scanner;
+
+import com.bridgelabz.Utility.Utility;
 public class DoubleOpt {
 	public static void main(String[] args) {
-		Scanner sc=new Scanner(System.in);
-		System.out.println("Enter the no. of foll operations:");
-		int op=sc.nextInt();
-		double a=sc.nextDouble();
-		double b=sc.nextDouble();
-		double c=sc.nextDouble();
-		switch(op) 
-		{
-			case 0: 
-				Double d=a+b*c;
-				System.out.println(d);
-					break;
-			case 1: 
-				Double e=a*b+c;
-				System.out.println(e);	
-					break;
-			case 2: 
-				Double f=c+a/b;
-				System.out.println(f);
-					break;
-			case 3:
-				Double g=a%b+c;
-				System.out.println(g);
-					break;
-			default: System.out.println("pls enter correct operation");
-		}
+		Scanner scanner=new Scanner(System.in);
+		System.out.println("Select one of the foll operations:");
+		System.out.println("1. a+b*c");
+		System.out.println("2. a*b+c");
+		System.out.println("3. c+a/b");
+		System.out.println("4. a%b+c");
+		int option=scanner.nextInt();
+		System.out.println("Enter the value of a:");
+		double a=scanner.nextDouble();
+		System.out.println("Enter the value of b:");
+		double b=scanner.nextDouble();
+		System.out.println("Enter the value of c:");
+		double c=scanner.nextDouble();
+		Utility utility=new Utility();
+		utility.getDoubleOperations(option, a, b, c);
+		scanner.close();
 	}
 }
