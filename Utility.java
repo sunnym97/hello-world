@@ -78,4 +78,12 @@ public class Utility {
 		System.out.println(root1_x);
 		System.out.println(root2_x);
 	}
+	
+	public void isSpringSeason(int d, int m) 
+	{
+		if((((d>=20)&&(d<32))&&(m==3))||((d<=20)&&(m==6))||((d<31)&&(m==4))||((d<32)&&(m==5)))
+			System.out.println("true");
+			else
+				System.out.println("false");
+	}
 }
