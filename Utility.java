@@ -1,7 +1,7 @@
 /******************************************************************************
  *  Purpose: This Program contains the logic of all the programs.
  *
- *  @author  Sunny
+ *  @author  Sunny Maurya
  *  @version 1.0
  *  @since   07-08-2019
  *
@@ -129,5 +129,87 @@ public class Utility {
 	{
 		int sum=dice1+dice2;
 		System.out.println(sum);
+	}
+	
+	/**
+	 * @param array0
+	 * @param array1
+	 * @param array2
+	 * @param array3
+	 * @param array4
+	 */
+	public void getAverageOf5Values(double array0, double array1, double array2, double array3, double array4)
+	{
+		double sum=array0+array1+array2+array3+array4;
+		double average=sum/5;
+		System.out.println(average);
+	}
+	
+	/**
+	 * @param array0
+	 * @param array1
+	 * @param array2
+	 * @param array3
+	 * @param array4
+	 */
+	public void getMinimumOf5Values(double array0, double array1, double array2, double array3, double array4)
+	{
+		double min=Math.min(array0,array1);
+		double min1=Math.min(array2,array3);
+		double min2=Math.min(min,min1);
+		double min3=Math.min(min2,array4);
+		System.out.println(min3);
+	}
+	
+	/**
+	 * @param array0
+	 * @param array1
+	 * @param array2
+	 * @param array3
+	 * @param array4
+	 */
+	public void getMaximumOf5Values(double array0, double array1, double array2, double array3, double array4)
+	{
+		double max=Math.max(array0,array1);
+		double max1=Math.max(array2,array3);
+		double max2=Math.max(max,max1);
+		double max3=Math.max(max2,array4);
+		System.out.println(max3);
+	}
+	
+	/**
+	 * @param P
+	 * @param Y
+	 * @param R
+	 */
+	public void getPayment(double P, int Y, double R)
+	{
+		double n=12*Y;
+		double r=R/(12*100);
+		double payment=(P*r)/(1-(Math.pow(1+r, -n)));
+		System.out.println(payment);
+	}
+	
+	/**
+	 * @param option
+	 * @param temperature
+	 */
+	public void getConvertedTemperature(int option, int temperature)
+	{
+		switch(option)
+		{
+			case 1: int C;
+					int F=temperature;
+					C=(F-32)*5/9;
+					System.out.println(C);
+					break;
+			
+			case 2: C=temperature;
+					F=(C*9/5)+32;
+					System.out.println(F);
+					break;
+					
+			default: System.out.println("Enter the correct option!!!");
+		}
 	}
 }
