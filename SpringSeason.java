@@ -1,5 +1,6 @@
 /******************************************************************************
- *  Purpose: This program .
+ *  Purpose: This program tells whether the given day & month falls under the
+ *  		 spring season or not.
  *
  *  @author  Sunny
  *  @version 1.0
@@ -8,6 +9,8 @@
  ******************************************************************************/
 
 package com.bridgelabz.functional;
+
+import com.bridgelabz.Utility.Utility;
 
 public class SpringSeason {
 
@@ -18,7 +21,9 @@ public class SpringSeason {
 			array[i]=Integer.parseInt(args[i]);
 			System.out.println(array[i]);
 		}
-
+		int d=array[0];
+		int m=array[1];
+		Utility utility=new Utility();
+		utility.isSpringSeason(d, m);
 	}
-
 }
