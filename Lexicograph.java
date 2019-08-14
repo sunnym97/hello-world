@@ -36,7 +36,7 @@ public class Lexicograph {
 			}
 				
 		}
-		
+		scanner.close();
 	}
 
 }
